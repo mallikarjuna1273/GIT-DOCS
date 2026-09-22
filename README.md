@@ -64,13 +64,21 @@
        # if the changed files in third phase it is shows like nothing to commit , working tree clean , when we check the git status
        # git push --set-upstream origin branchName / git push 
        # before pushing the code to gitHub need to take latest pull from gitHub / parent branch / feature branch to avoid conflicts, here's the command
-       # git pull
+       # git pull (it will automatically take the commits from the repository without doing merge or rebase)
+       # git fetch (it will fetch the commit history from repository but we need to merge / rebase)
+
 
   # how merge conflicts will happen and how to avoid it
        # if you are working in one file and other persons also working on the same file , in this case if you push your code on first in the parent branch there's no issues found for you but after someone try to push the code without taking latest pull from the parent branch at that time another person face merge conflicts it means , someone added these changes and you are added these changes (current, incoming changes) which one is the correct and which one needs to avoid , this is the way we can resolve merge conflicts, to avoid merge conflicts whenever pushing the changes in parent branch better to take pull from the parent branch and then resolve issues in local and pushing the code to the parent is avoid merge conflicts
 
   # we can able to merge one branch into another  , by using this command
        # git merge branchName (first we need to checkout to the base branch and run this command with the branch need to merge)
+       # it will not modified the history but little messy in the structure (history is not in linear format)
+       # it will helps to track the history better to use in merges feature branch to main branch
+       # git rebase branchName is also similar to merge the branches but it rewrites the history
+       # git squash is used to combine multiple commits into single commit
+
+
 
 
 
